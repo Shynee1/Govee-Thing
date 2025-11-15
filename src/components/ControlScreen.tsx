@@ -8,7 +8,7 @@ interface ControlScreenProps {
   onColorChange: (r: number, g: number, b: number) => void;
   onBrightnessChange: (brightness: number) => void;
   onColorTemperatureChange: (kelvin: number) => void;
-  onPowerToggle: (on: boolean) => void;
+  onPowerToggle: (on: boolean, brightness?: number) => void;
   onDisconnect: () => void;
 }
 
@@ -40,7 +40,11 @@ const ControlScreen: React.FC<ControlScreenProps> = ({
   const handlePowerToggle = () => {
     const newState = !isPoweredOn;
     setIsPoweredOn(newState);
-    onPowerToggle(newState);
+    if (newState) {
+      onPowerToggle(newState, brightness);
+    } else {
+      onPowerToggle(newState);
+    }
   };
 
   const handlePresetColor = (r: number, g: number, b: number) => {

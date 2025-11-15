@@ -36,6 +36,7 @@ const App: React.FC = () => {
         setConnectedDevices(connected);
         setCurrentScreen('control');
         setIsConnecting(false);
+        GoveeService.setBrightness(connected, 100);
       }
     });
 
@@ -141,9 +142,14 @@ const App: React.FC = () => {
     GoveeService.setColor(connectedDevices, Math.round(r), Math.round(g), Math.round(b));
   };
 
-  const handlePowerToggle = (on: boolean) => {
+  const handlePowerToggle = (on: boolean, brightness?: number) => {
     if (connectedDevices.length > 0) {
-      GoveeService.setPower(connectedDevices, on);
+      if (on && brightness !== undefined) {
+        GoveeService.setBrightness(connectedDevices, brightness);
+      }
+      else {
+        GoveeService.setPower(connectedDevices, on);
+      }
     }
   };
 
