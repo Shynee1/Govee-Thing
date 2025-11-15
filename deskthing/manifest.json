@@ -1,0 +1,27 @@
+{
+  "id": "govee-thing",
+  "isWebApp": true,
+  "requires": [
+    ""
+  ],
+  "label": "Govee Thing",
+  "version": "0.11.7",
+  "description": "Control bluetooth-enabled Govee lights from DeskThing.",
+  "author": "Jack Ford",
+  "platforms": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "homepage": "",
+  "repository": "https://github.com/Shynee1/govee-thing",
+  "tags": [
+    false,
+    false
+  ],
+  "requiredVersions": {
+    "server": ">=0.11.13",
+    "client": ">=0.11.2"
+  },
+  "updateUrl": "https://github.com/Shynee1/govee-thing"
+}
