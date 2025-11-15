@@ -71,7 +71,7 @@ const ControlScreen: React.FC<ControlScreenProps> = ({
       <div className="flex items-center justify-between border-b-2 border-gray-800">
         {/* Back Arrow */}
         <button 
-          className="p-3 hover:bg-gray-800 rounded-xl transition-colors"
+          className="p-6 hover:bg-gray-800 rounded-xl transition-colors"
           onClick={handleDisconnectClick}
           title="Disconnect"
         >
@@ -96,7 +96,7 @@ const ControlScreen: React.FC<ControlScreenProps> = ({
 
         {/* Power Button */}
         <button 
-          className={`p-4 rounded-full transition-all ${
+          className={`p-6 rounded-full transition-all ${
             isPoweredOn 
               ? 'bg-green-500 hover:bg-green-600 shadow-lg shadow-green-500/50' 
               : 'bg-gray-700 hover:bg-gray-600'
@@ -147,32 +147,32 @@ const ControlScreen: React.FC<ControlScreenProps> = ({
             <div className="flex gap-3 justify-between">
               {/* Red */}
               <button
-                className="flex-1 bg-red-500 aspect-square rounded-lg border-2 border-gray-700 hover:border-white transition-all hover:scale-105 active:scale-95 shadow-lg max-w-[200px]"
+                className="w-16 h-16 bg-red-500 rounded-lg border-2 border-gray-700 hover:border-white transition-all hover:scale-105 active:scale-95 shadow-lg"
                 onClick={() => handlePresetColor(255, 0, 0)}
               />
               {/* Green */}
               <button
-                className="flex-1 bg-green-500 aspect-square rounded-lg border-2 border-gray-700 hover:border-white transition-all hover:scale-105 active:scale-95 shadow-lg max-w-[200px]"
+                className="w-16 h-16 bg-green-500 rounded-lg border-2 border-gray-700 hover:border-white transition-all hover:scale-105 active:scale-95 shadow-lg"
                 onClick={() => handlePresetColor(0, 255, 0)}
               />
               {/* Blue */}
               <button
-                className="flex-1 bg-blue-500 aspect-square rounded-lg border-2 border-gray-700 hover:border-white transition-all hover:scale-105 active:scale-95 shadow-lg max-w-[200px]"
+                className="w-16 h-16 bg-blue-500 rounded-lg border-2 border-gray-700 hover:border-white transition-all hover:scale-105 active:scale-95 shadow-lg"
                 onClick={() => handlePresetColor(0, 0, 255)}
               />
               {/* Yellow */}
               <button
-                className="flex-1 bg-yellow-500 aspect-square rounded-lg border-2 border-gray-700 hover:border-white transition-all hover:scale-105 active:scale-95 shadow-lg max-w-[200px]"
+                className="w-16 h-16 bg-yellow-500 rounded-lg border-2 border-gray-700 hover:border-white transition-all hover:scale-105 active:scale-95 shadow-lg"
                 onClick={() => handlePresetColor(255, 255, 0)}
               />
               {/* Purple */}
               <button
-                className="flex-1 bg-purple-500 aspect-square rounded-lg border-2 border-gray-700 hover:border-white transition-all hover:scale-105 active:scale-95 shadow-lg max-w-[200px]"
+                className="w-16 h-16 bg-purple-500 rounded-lg border-2 border-gray-700 hover:border-white transition-all hover:scale-105 active:scale-95 shadow-lg"
                 onClick={() => handlePresetColor(128, 0, 128)}
               />
               {/* White */}
               <button
-                className="flex-1 bg-stone-50 aspect-square rounded-lg border-2 border-gray-700 hover:border-white transition-all hover:scale-105 active:scale-95 shadow-lg max-w-[200px]"
+                className="w-16 h-16 bg-stone-50 rounded-lg border-2 border-gray-700 hover:border-white transition-all hover:scale-105 active:scale-95 shadow-lg"
                 onClick={() => handlePresetColor(255, 255, 255)}
               />
             </div>
